@@ -190,7 +190,7 @@
 // //"Exmaple.txt"
 // const fs = require('fs');
 // const readStream = fs.createReadStream('./example.txt','utf8');
-// const writeStream = fs.createWriteStream('./example2.txt')
+// const writeStream = fs.createWriteStream('./example2.txt');
 // readStream.on('data',(chunk)=>{
 //     writeStream.write(chunk);
 // });
@@ -201,4 +201,63 @@
 //buffer size.
 //Using read and write stream can avoid this kind of problem.
 
-/*Pipes and Pipe Chaining. (Readable,Writable and Transform Streams)*/
+// /*Pipes and Pipe Chaining. (Readable,Writable and Transform Streams)*/
+// const fs = require('fs');
+// const zlib = require('zlib');
+// // const gzip = zlib.createGzip();
+// const gunzip = zlib.createGunzip();
+// const readStream = fs.createReadStream('./example2.txt.gz');
+// const writeStream = fs.createWriteStream('example2_unzipped.txt');
+// // //Short version of loop write.
+// // readStream.pipe(writeStream);
+// //Compressed version of read stream
+// //Zip it !
+// // readStream.pipe(gzip).pipe(writeStream);
+// //unzip it !
+// readStream.pipe(gunzip).pipe(writeStream);
+
+/*Creating a Http Server using the Http Module*/
+// //Create web server using js.
+// const http = require('http');
+// const httpserver = http.createServer((req,res)=>{
+//     // res.write('Hello world from Nodejs');
+//     // res.end();
+//     if(req.url === '/')
+//     {
+//         //Go to chrome and type in localhost:3000
+//         res.write('Hello world from Nodejs');
+//         res.end();
+//     }
+//     else
+//     {
+//         //Go to chrome and type in localhost:3000/anything.
+//         res.write('Using other domain.');
+//         res.end();
+//     }
+
+// });
+
+// httpserver.listen('3000');
+
+/*Serving Static Files with Http and File System Module (html,json,image) */
+// //static folder.
+// const http = require('http');
+// const fs = require('fs');
+// http.createServer((req,res)=>{
+//     const readStream = fs.createReadStream('./static/index.html');
+//     //200:Everying is Ok.
+//     res.writeHead(200,{'content-type':'text/html'}); 
+//     readStream.pipe(res);
+
+//     // const readStream = fs.createReadStream('./static/example_1.json');
+//     // //200:Everying is Ok.
+//     // res.writeHead(200,{'content-type':'application/json'}); 
+//     // readStream.pipe(res);
+
+//     // const readStream = fs.createReadStream('./static/example.png');
+//     // //200:Everying is Ok.
+//     // res.writeHead(200,{'content-type':'image/png'}); 
+//     // readStream.pipe(res);
+// }).listen(3000);
+
+/*Create our Package.json using Npm Init*/
