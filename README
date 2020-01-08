@@ -1,3 +1,8 @@
 This is personal note about learning Nodejs
 All code are from Youtube online resource with some change.
 Link of the course: https://www.youtube.com/watch?v=RLtyhwFtXQA&list=PLzTaxB2A2pvqDhANJQb5-H31eUOI-rtFl&index=5
+
+In order to run this sample without error:
+1.Make sure you have npm installed.
+2.run "npm i lodash" in cmd for npm example.
+3.run "npm i express" in cmd for Express Web Framework.

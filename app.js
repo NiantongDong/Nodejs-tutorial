@@ -261,3 +261,87 @@
 // }).listen(3000);
 
 /*Create our Package.json using Npm Init*/
+//command : npm init
+
+/*Installing Packages using Npm (Node Package Manager)*/
+// //Install lodash
+// //command: npm install(i)
+// const _ = require('lodash');
+// let example = _.fill([1,2,3,4,5],"ND",1,4);
+// console.log(example);
+// //Uninstall command: npm uninstall.
+
+/* =Semantic Versioning*/
+//           ^major.minor.patch
+//"lodash": "^4.17.15"
+//^: want minor update and patch update.
+//~: only wnat patch update.
+//without any symbol : I want the exact version.
+// patch update: bug fixed
+// minor update: add or modify some functions
+// major update: breaking change.
+
+
+/*Getting started with Express Web Framework*/
+// //command: npm i express
+// //Using Chrome.
+// const express = require('express');
+// const app = express();
+
+// app.get('/',(req,res)=>{
+//     res.send('Hello World');
+// });
+
+// app.listen(3000);
+
+/*Working with Express Http Get Request, Route Params and Query Strings*/
+// const express = require('express');
+// const app = express();
+
+// app.get('/',(req,res)=>{
+//     res.send('Hello World');
+// });
+
+// app.get('/example',(req,res)=>{
+//     res.send('example route')
+// });
+
+// app.get('/example/:name/:age',(req,res)=>{
+//     //http://localhost:3000/example/ND/21
+//     console.log(req.params);
+
+//     //? name = value
+//     console.log(req.query);
+//     res.send('Hello,' + req.params.name + ":" + req.params.age);
+// });
+
+// app.listen(3000);
+
+/*Serving Static Files with Express*/
+// const express = require('express');
+// const path = require('path');
+// const app = express();
+// //Give a alias for my static folder.
+// app.use('/public',express.static(path.join(__dirname,'static')));
+// app.get('/',(req,res)=>{
+//     res.sendFile(path.join(__dirname,'static','index.html'));
+// });
+
+// app.listen(3000);
+
+//The following lesson is a real project about using Express to 
+//build a tiny server and pass with some data.
+
+/* Http Post Request with Express and Body Parser Module*/
+
+/*Working with JSON Data with Express and the Body Parser Module*/
+
+/*User Input Validation With Express And JOI*/
+/*User Input Validation with JOI Validating Nested Object and Arrays*/
+
+//Dynamic web page.
+/*Getting Started With EJS Templates With Express*/
+
+
+/* How does MiddleWare Work and Creating Custom Middleware*/
+/* Working With The Express Router*/
